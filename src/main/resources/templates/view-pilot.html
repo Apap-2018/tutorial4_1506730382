@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Hasil Pilot</title>
+</head>
+
+<body th:inline="text">
+	<h3>Pilot License Number [[${pilot.id}]]</h3><h3></h3>
+	<h3>Name : [[${pilot.name}]]</h3><h3></h3>
+	<h3>Fly Hour : [[${pilot.flyHour}]]</h3><h3></h3>
+	<a th:href="@{'/flight/add/' + ${pilot.licenseNumber}}">Add Flight</a>
+</body>
+
+</html>
